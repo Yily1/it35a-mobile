@@ -42,7 +42,7 @@ const Menu: React.FC = () =>{
         </IonMenu>
 
         <IonRouterOutlet id="main">
-          {}
+          {/* FIXED: lowercase "home" */}
           <Route exact path="/app/home" component={Home} />
 
           <Route exact path="/app">
