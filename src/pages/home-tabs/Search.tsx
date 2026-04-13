@@ -8,11 +8,12 @@ const Search: React.FC = () =>{
                   <IonToolbar>
                     <IonButtons>
                     <IonMenuButton></IonMenuButton>
-                  <IonTitle>Search</IonTitle>
-                   </IonButtons>
+                     <IonTitle>Search</IonTitle>
+                  </IonButtons>
                 </IonToolbar>
               </IonHeader>
-              <IonContent fullscreen>
+               <IonContent className="ion-padding">
+                <h1>Search</h1>
               </IonContent>
               </IonPage>
       );

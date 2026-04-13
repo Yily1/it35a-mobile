@@ -1,4 +1,5 @@
 
+
 import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent } from '@ionic/react';
 
 const Favorites: React.FC = () =>{
@@ -8,11 +9,12 @@ const Favorites: React.FC = () =>{
                   <IonToolbar>
                     <IonButtons>
                     <IonMenuButton></IonMenuButton>
-                  <IonTitle>Favorites</IonTitle>
-                   </IonButtons>
+                     <IonTitle>Favorites</IonTitle>
+                  </IonButtons>
                 </IonToolbar>
               </IonHeader>
-              <IonContent fullscreen>
+              <IonContent className="ion-padding">
+                <h1>Favorites</h1>
               </IonContent>
               </IonPage>
       );
