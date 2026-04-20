@@ -1,10 +1,11 @@
 
 
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonItem, IonLabel, IonList, IonListHeader, IonSearchbar } from '@ionic/react';
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonItem, IonLabel, IonList, IonListHeader, IonSearchbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
+import { chatboxEllipsesOutline, shareOutline, thumbsDown, thumbsUpOutline } from 'ionicons/icons';
 
 const Feed: React.FC = () =>{
 
-  const labels = [ 
+  const games = [ 
     {name: 'Pokémon Yellow'},
      {name: 'Mega Man X'},
       {name: 'The Legend of Zelda'},
@@ -24,14 +25,65 @@ const Feed: React.FC = () =>{
                 </IonToolbar>
               </IonHeader>
                <IonContent className="ion-padding">
-                <h1>Naa lgi ka deri?</h1>
+                <h1>Feed</h1>
                 <IonSearchbar value="Search"></IonSearchbar>
                  {/**/}
-           {labels.map((item, index) =>(
+           {games.map((item, index) =>(
+            
                 <IonList>
-                  <IonListHeader>
-                    <IonLabel>{item.name}</IonLabel>
-                  </IonListHeader>
+               <IonCard>
+ <IonGrid>
+        <IonRow>
+          <IonCol>
+
+            <img style={{width:"200px", height:"200px"}} alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          </IonCol>
+
+          <IonCol>
+
+            
+                 <IonCardHeader>
+                   <IonCardTitle>{item.name}</IonCardTitle>
+                   <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+                 </IonCardHeader>
+
+                 <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+
+              </IonCol>
+
+
+       
+        </IonRow>
+      </IonGrid>
+
+
+                
+            
+                  
+             <IonGrid>
+                 <IonRow>
+                   <IonCol>
+                    <IonButtons>
+                      <IonIcon icon={thumbsUpOutline}></IonIcon>
+                      <IonLabel style={ {marginLeft:"3px"}}> Like</IonLabel>
+                    </IonButtons>
+                   </IonCol>
+
+                   <IonCol> <IonButtons>
+                      <IonIcon icon={chatboxEllipsesOutline}></IonIcon>
+                      <IonLabel style={ {marginLeft:"3px"}}> Comment</IonLabel>
+                    </IonButtons></IonCol>
+
+                   <IonCol> <IonButtons>
+                      <IonIcon icon={shareOutline}></IonIcon>
+                      <IonLabel style={ {marginLeft:"3px"}}> Share</IonLabel>
+                    </IonButtons></IonCol>
+                 </IonRow>
+               </IonGrid>
+
+
+               </IonCard>
+
              </IonList>
 
            ))}
