@@ -1,10 +1,9 @@
 
 
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonAlert, IonButton } from '@ionic/react';
-
-
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonItem, IonLabel, IonList, IonListHeader, IonSearchbar, IonButton, IonAlert } from '@ionic/react';
 
 const Favorites: React.FC = () =>{
+
       return(
            <IonPage>
               <IonHeader>
